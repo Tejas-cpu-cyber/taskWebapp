@@ -1,0 +1,22 @@
+'''{% extends 'base.html' %}
+{% block title %}Login Page{% endblock %}
+{% block content %}
+<div class="contauner pt-4">
+  <div class="col-lg-5 shadow mx-auto p-0">
+    <div class="alert alert-info">
+      <h1>Request New Password Page</h1>
+    </div>
+    <div class="p-4 pt-2">
+      <form method="POST">
+        {% csrf_token %}
+        <label>Email</label>
+        <input type="email" class="form-control" name="em" placeholder="Enter registered email" required>
+        <h7 style="color: blue;"> Note: Your New Password Will Be Emailed To U </h7>
+        <hr>
+        <input type="submit" class="btn btn-danger" value="Request New Password">
+      </form>
+      <p style="color: red;">{{msg }}</p>
+    </div>
+  </div>
+  {% endblock %}
+'''
